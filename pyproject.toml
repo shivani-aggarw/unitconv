@@ -91,7 +91,7 @@ only-packages = true
 # This tells Hatch to build the package from the src/ directory.
 # Read more about src layouts here: https://www.pyopensci.org/python-package-guide/package-structure-code/python-package-structure.html
 [tool.hatch.build.targets.wheel]
-packages = ["src/unitconv-dsci310"]
+packages = ["src/unitconv"]
 
 
 
@@ -102,8 +102,8 @@ markers = ["raises"] # Tells pytest to not raise a warning if you use @pytest.ma
 
 [tool.coverage.paths]
 source = [
-    "src/unitconv-dsci310",
-    "*/site-packages/unitconv-dsci310",
+    "src/unitconv",
+    "*/site-packages/unitconv",
 ]
 
 [tool.coverage.run]
@@ -154,7 +154,7 @@ dev-mode = true
 python = ["3.10", "3.11", "3.12", "3.13"]
 
 [tool.hatch.envs.test.scripts]
-run = "pytest {args:--cov=unitconv-dsci310 --cov-report=term-missing --cov-report=xml}"
+run = "pytest {args:--cov=unitconv --cov-report=term-missing --cov-report=xml}"
 
 #--------------- Build and preview your documentation ---------------#
 
@@ -171,7 +171,7 @@ features = [
 # hatch run docs:serve will serve them 'live' on your computer locally
 [tool.hatch.envs.docs.scripts]
 build = ["sphinx-build {args:-W -b html docs docs/_build}"]
-serve = ["sphinx-autobuild docs --watch src/unitconv-dsci310 {args:-b html docs/_build/serve}"]
+serve = ["sphinx-autobuild docs --watch src/unitconv {args:-b html docs/_build/serve}"]
 
 
 
