@@ -19,6 +19,9 @@ description = "Package to convert between units"
 authors = [
     { name = "Shivani Aggarwal", email = "shivani05aggarwal@gmail.com" },
 ]
+maintainers = [
+    { name = "Shivani Aggarwal", email = "shivani05aggarwal@gmail.com" },
+]
 license = "MIT"
 requires-python = ">= 3.10" # Adjust based on the minimum version of Python that you support
 readme = {"file" = "README.md", "content-type" = "text/markdown"}
